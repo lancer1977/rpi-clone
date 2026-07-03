@@ -1,6 +1,38 @@
 ## rpi-clone
 Latest version: 2.0.22
 
+## Project Stewardship
+
+`rpi-clone` is a Bash utility for cloning a running Raspberry Pi source disk
+to a bootable SD card, USB flash disk, or USB hard drive. The primary
+deliverables are the executable scripts `rpi-clone` and `rpi-clone-setup`.
+
+### Repository layout
+
+- `rpi-clone` - main disk cloning script.
+- `rpi-clone-setup` - optional hostname/setup helper for cloned systems.
+- `scripts/validate.sh` - local validation entry point used by CI.
+
+### Validation
+
+Run the non-destructive validation suite from the repository root:
+
+```bash
+./scripts/validate.sh
+```
+
+The validation checks Bash syntax for both scripts and verifies basic
+non-mutating usage/version behavior. Device cloning still requires a
+privileged Raspberry Pi or compatible Linux host and an explicitly selected
+destination disk.
+
+### Setup notes
+
+Install by copying `rpi-clone` and `rpi-clone-setup` to a root-owned directory
+on `PATH`, such as `/usr/local/sbin`. Always run real clone operations with
+the intended destination disk name and review the examples below before using
+force or unattended options.
+
 Version 2 is a complete rewrite with improved capability over
 the original.  See the examples below.
 
