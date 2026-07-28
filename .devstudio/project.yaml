@@ -1,0 +1,15 @@
+name: rpi-clone
+repo_root: /home/lancer1977/code/rpi-clone
+
+languages: []
+frameworks: []
+
+ci:
+  build: []
+  test: []
+
+devstudio:
+  runtime_model: three-agent
+  backlog_ordering: filename
+  skip_promoted_planning: true
+  one_stage_per_run: true
